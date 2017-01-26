@@ -1,0 +1,10 @@
+{
+    "end_with_newline": true,
+    "js": {
+      "indentChar": " ",
+      "indentSize": 4
+    },
+    "json": {
+      "indentSize": 2
+    }
+}

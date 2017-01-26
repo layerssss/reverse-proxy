@@ -1,0 +1,24 @@
+{
+  "name": "reverse_proxy",
+  "version": "1.0.1",
+  "description": "",
+  "bin": {
+    "reverse_proxy": "./bin/reverse_proxy.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Yin",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.13.1"
+  },
+  "dependencies": {
+    "commander": "~2.9",
+    "greenlock": "~2.1",
+    "le-sni-auto": "~2.1",
+    "pathifier": "~1.0.5",
+    "underscore.string": "~3.3"
+  }
+}
