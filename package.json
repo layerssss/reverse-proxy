@@ -18,7 +18,7 @@
     "commander": "~2.9",
     "greenlock": "~2.1",
     "le-sni-auto": "~2.1",
-    "pathifier": "1.0.8",
+    "pathifier": "1.0.9",
     "underscore.string": "~3.3"
   }
 }
