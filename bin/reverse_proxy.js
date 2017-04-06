@@ -7,23 +7,16 @@ var commander = require('commander');
 Promise.resolve()
     .then(() => {
         commander.version(require('../package.json').version)
-            .option('-p --http-port [integer]', 'HTTP port')
-            .option('-s --https-port [integer]', 'HTTPS PORT')
-            .option('-b --bind [string]', 'HTTP bind')
-            .option('-c --config [path]', 'Config file')
-            .option('-e --email [email]', 'Email')
+            .option('-p --http-port [integer]', 'HTTP port', ((i, d) => parseInt(i || d)), 80)
+            .option('-s --https-port [integer]', 'HTTPS PORT', ((i, d) => parseInt(i || d)), 443)
+            .option('-b --bind [string]', 'HTTP bind', '0.0.0.0')
+            .option('-e --email [string]', 'email', process.env['EMAIL'])
+            .option('-c --config-file-path [path]', 'Config file path')
             .option('-d --debug', 'Enable debug')
             .parse(process.argv);
     })
     .then(() => commander.args.length && Promise.reject(new Error('Please use pathifier --help to see the usage.'))) // eslint-disable-line no-console
-    .then(() => Cli.execute({
-        httpPort: commander.httpPort,
-        httpsPort: commander.httpsPort,
-        bind: commander.bind,
-        configFile: commander.config,
-        email: commander.email
-
-    }))
+    .then(() => Cli.execute(commander))
     .catch((error) => {
         if (commander.debug) {
             if (error.stack) {

@@ -1,6 +1,6 @@
 {
   "name": "reverse_proxy",
-  "version": "1.0.9",
+  "version": "2.0.2",
   "description": "",
   "bin": {
     "reverse_proxy": "./bin/reverse_proxy.js"
@@ -16,9 +16,11 @@
   },
   "dependencies": {
     "commander": "~2.9",
+    "cookie": "^0.3.1",
     "greenlock": "~2.1",
-    "le-sni-auto": "~2.1",
-    "pathifier": "1.0.9",
-    "underscore.string": "~3.3"
+    "le-sni-auto": "^2.1.0",
+    "moment": "^2.18.1",
+    "qs": "^6.4.0",
+    "uuid": "^3.0.1"
   }
 }
