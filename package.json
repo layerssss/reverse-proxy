@@ -1,6 +1,6 @@
 {
   "name": "reverse_proxy",
-  "version": "2.0.7",
+  "version": "2.0.9",
   "description": "",
   "bin": {
     "reverse_proxy": "./bin/reverse_proxy.js"
@@ -19,6 +19,7 @@
     "cookie": "^0.3.1",
     "greenlock": "~2.1",
     "le-sni-auto": "^2.1.0",
+    "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "qs": "^6.4.0",
     "uuid": "^3.0.1"
